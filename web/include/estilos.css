@@ -1,0 +1,10 @@
+/*Estilos bloque bienvenidos*/
+.bienvenidos {
+  background: url("../img/1.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+
+
