@@ -11,11 +11,6 @@
     </head>
     <body>
          <%@ include file="../include/headerVendedor.jsp" %>  
-        <%
-            Connection con = null;
-            Statement st = null;
-            ResultSet rs = null;
-        %>
         
         <form class="text-center border border-light p-2">
             <p class="h4 mb-4">Administrador de Ventas</p>
@@ -57,10 +52,9 @@
                     </td>
                 </tr>                                    
                 <%
-                        }
-                    } 
-                    catch (Exception e) {
-                        out.print("error mysql "+e);
+                    }
+                    } catch (Exception e) {
+                        out.print("error mysql " + e);
                     }
                 %>
             </tbody>

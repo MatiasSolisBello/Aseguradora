@@ -24,10 +24,7 @@
           <br>
           <h1>Actualize Cliente</h1>
           <br>
-            <div class="form-group">
-                <input type="text" name="rut" class="form-control" 
-                placeholder="RUN" value="<%= rut%>" required="required">
-            </div>
+
             <div class="form-group">
                 <input type="text" name="nombre" class="form-control" 
                 placeholder="Nombres" value="<%= nombre%>" required="required">

@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <input type="text" name="descripcion" class="form-control" 
-                placeholder="Descripcion" value="<%= descripcion%>" required="required">
+                placeholder="descripcion" value="<%= descripcion%>" required="required">
             </div>
             <input type="submit" name="enviar" class="btn btn-success btn-block" value="Guardar">
             <input type="hidden" name="id" value="<%= id%>" >

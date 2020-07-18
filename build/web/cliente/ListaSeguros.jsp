@@ -12,11 +12,7 @@
     </head>
     <body>
         <%@ include file="../include/headerCliente.jsp" %>  
-        <%
-            Connection con = null;
-            Statement st = null;
-            ResultSet rs = null;
-        %>
+
         
         <form class="text-center border border-light p-2">
             <p class="h4 mb-4">Administrador de Seguros</p>
