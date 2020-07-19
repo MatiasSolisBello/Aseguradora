@@ -13,12 +13,18 @@ Experiment made with Java Web
 + Open the project with Netbeans
 + Play the project
 
-This project include:
+In case of error: "WEB-INF folder is not created."
+Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
+
+## This project include:
 - [x] CRUD different tables
 - [x] Login for role
+- [x] Full password encryption
+- [x] Show purchases by logged in user 
 
-Possible future improvements
+## Possible future improvements
 - [ ] Clean Code
+- [ ] Admin "comprar" table
 - [ ] Generate PDF
 - [ ] API REST
 - [ ] Generate emails

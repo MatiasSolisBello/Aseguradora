@@ -7,6 +7,6 @@
     </head>
     <body>
         <%@ include file="../include/headerCliente.jsp" %>
-        <h1>Hello Cliente!</h1>
+        <h1>Bienvenido</i> <%= sesion.getAttribute("correo")%></a></h1>
     </body>
 </html>

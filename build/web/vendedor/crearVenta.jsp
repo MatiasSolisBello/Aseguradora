@@ -11,21 +11,13 @@
     <body>
         <%@ include file="../include/headerVendedor.jsp" %>  
         <div class="container h-50">
-        <!-- ADD TASK FORM -->
         <div class="row h-50 justify-content-center align-items-center">
-          <!--GUARDAR-->
-            <form action="crearVenta.jsp" method="POST">
-                <br>
-                <h1>Registre Venta</h1>
-                <br>
-                <select name="clr">
-                    <option>Red</option>
-                    <option>Blue</option>   
-                    <option>Green</option>
-                    <option>Pink</option>
-                </select>
-                <input type="submit" name="enviar" class="btn btn-success btn-block" value="Guardar">
-            </form>
+        <form action="crearVenta.jsp" method="POST">
+            <br>
+            <h1>Registre Venta</h1>
+            <br>
+            <input type="submit" name="enviar" class="btn btn-success btn-block" value="Guardar">
+        </form>
         </div>
         </div>
         <%
@@ -33,9 +25,6 @@
             String rut = request.getParameter("rut");
             String seguro = request.getParameter("seguro");
             try {
-                Connection con=null;
-                Statement st=null;
-
                 Class.forName("com.mysql.jdbc.Driver");
                 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                 st=con.createStatement();

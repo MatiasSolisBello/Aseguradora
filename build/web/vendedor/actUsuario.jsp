@@ -1,6 +1,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="Config.Encriptar" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -44,17 +45,16 @@
         </div>
         </div>
         <%
+        Encriptar enc=new Encriptar();
         if (request.getParameter("enviar") != null) {
         try {
-            Connection con = null;
-            Statement st = null;
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
             st = con.createStatement();
             st.executeUpdate("update cliente set rut='" + rut + "',"
                             + " nombre='" + nombre + "',"
                             + "correo='" + correo + "',"
-                            + "pass='" + password + "' "
+                            + "pass='" + enc.getMD5(password) + "' "
                             + "where rut='"+rut+"';");
             request.getRequestDispatcher("clientes.jsp").forward(request, response);
         } catch (Exception e) {
