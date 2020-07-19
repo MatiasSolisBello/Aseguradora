@@ -2,6 +2,9 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
+<%@page import="java.math.BigInteger"%>
+<%@page import="java.security.MessageDigest"%>
+<%@page import="Config.Encriptar" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -39,6 +42,8 @@
                 Connection con = null;
                 Statement st = null;
                 ResultSet rs = null;
+                
+                Encriptar enc=new Encriptar();
                 if (request.getParameter("login") != null) {
                     String correo = request.getParameter("correo");
                     String password = request.getParameter("password");
@@ -47,7 +52,7 @@
                         Class.forName("com.mysql.jdbc.Driver");
                         con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                         st = con.createStatement();
-                        rs = st.executeQuery(" SELECT * FROM cliente where correo='" + correo + "' and pass='" + password + "'; ");
+                        rs = st.executeQuery(" SELECT * FROM cliente where correo='" + correo + "' and pass='" + enc.getMD5(password) + "'; ");
                         while (rs.next()) {
                             sesion.setAttribute("logueado", "1");
                             sesion.setAttribute("correo", rs.getString("correo"));
