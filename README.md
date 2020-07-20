@@ -23,8 +23,7 @@ Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
 - [x] Show purchases by logged in user 
 
 ## Possible future improvements
-- [ ] Clean Code
-- [ ] Admin "comprar" table
+- [ ] Backup for buy segure
 - [ ] Generate PDF
 - [ ] API REST
 - [ ] Generate emails

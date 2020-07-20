@@ -19,7 +19,7 @@
                     <input id="entradafilter" type="text" class="form-control" placeholder="Filtrado">
                 </div>
                 <div>
-                    <a href="crearVenta.jsp" class="btn btn-success">Agregar Venta</a>
+                    <a href="reporte.jsp" class="btn btn-success">GENERAR REPORTE</a>
                 </div>
             </div>
         </form>
@@ -29,7 +29,6 @@
                     <th scope="col">ID</th>
                     <th scope="col">Cliente</th>
                     <th scope="col">Seguro</th>
-                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody class="contenidobusqueda">
@@ -45,11 +44,7 @@
                 <th scope="row"><%= rs.getString(1)%></th>
                     <td><%= rs.getString(2)%></td>
                     <td><%= rs.getString(3)%></td>
-                    <td>
-                        <!--BOTONES-->
-                        <a href="#" class="btn btn-secondary">EDITAR</a>
-                        <a href="borrarCompra.jsp?id=<%= rs.getString(1)%>" class="ml-1"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </td>
+                    
                 </tr>                                    
                 <%
                     }

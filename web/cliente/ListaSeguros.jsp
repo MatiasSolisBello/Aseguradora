@@ -49,7 +49,7 @@
                     <td><%= rs.getString(4)%></td>
                     <td>
                         <!--BOTONES-->
-                        <a href="#" class="btn btn-secondary">COMPRAR SEGURO</a>
+                        <a href="compra.jsp?id=<%= rs.getString(1)%>&nombre=<%= rs.getString(2)%>&precio=<%= rs.getString(3)%>&descripcion=<%= rs.getString(4)%>" class="btn btn-secondary">COMPRAR SEGURO</a>
                     </td>
                 </tr>                                    
                 <%
