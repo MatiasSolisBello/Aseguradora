@@ -8,6 +8,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <!--Borramos elementos innecesarios para el pdf-->
+        <style> 
+            @media print{
+                .col, .btn-reporte{
+                    display:none;
+                }
+            }
+        </style>
     </head>
     <body>
          <%@ include file="../include/headerVendedor.jsp" %>  
@@ -18,8 +26,8 @@
                 <div class="col">
                     <input id="entradafilter" type="text" class="form-control" placeholder="Filtrado">
                 </div>
-                <div>
-                    <a href="reporte.jsp" class="btn btn-success">GENERAR REPORTE</a>
+                <div class="btn-reporte">
+                    <a href="#" onclick="print()" class="btn btn-success">GENERAR REPORTE</a>
                 </div>
             </div>
         </form>
@@ -37,7 +45,8 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                 st = con.createStatement();
-                rs = st.executeQuery("SELECT v.id, c.nombre, s.nombre FROM venta v INNER Join cliente c on c.rut = v.rut INNER JOIN seguro s on s.id = v.seguro;");
+                //rs = st.executeQuery("SELECT v.id, c.nombre, s.nombre FROM venta v INNER Join cliente c on c.rut = v.rut INNER JOIN seguro s on s.id = v.seguro;");
+                rs = st.executeQuery("SELECT * FROM venta");
                 while (rs.next()) {
             %>
             <tr>

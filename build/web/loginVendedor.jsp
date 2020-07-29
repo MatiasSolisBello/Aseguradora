@@ -16,12 +16,12 @@
                 <div class="col-sm">
                     <form method="post" action="loginVendedor.jsp">
                         <div class="form-group">
-                            <label>Usuario</label>
-                            <input type="text" class="form-control" name="correo" placeholder="Humano pon tu usuario">
+                            <label>Correo</label>
+                            <input type="text" class="form-control" name="correo" placeholder="Correo">
                         </div>
                         <div class="form-group">
                             <label>Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Humano pon tu password">
+                            <input type="password" class="form-control" name="password" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-primary" name="login" >Login</button>
                     </form>

@@ -48,7 +48,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                 st=con.createStatement();
-                st.executeUpdate("insert into venta (rut,seguro) values('"+rut+"','"+seguro+"');");
+                st.executeUpdate("insert into venta (id,rut,seguro) values('"+id+"','"+rut+"','"+seguro+"');");
                 request.getRequestDispatcher("MisSeguros.jsp").forward(request, response);
             } catch (Exception e) {
                 out.print(e);

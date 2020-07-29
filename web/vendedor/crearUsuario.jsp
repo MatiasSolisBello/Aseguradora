@@ -15,26 +15,31 @@
         <!-- ADD TASK FORM -->
         <div class="row h-50 justify-content-center align-items-center">
           <!--GUARDAR-->
-          <form action="crearUsuario.jsp" method="POST">
+          <form id="theForm" action="crearUsuario.jsp" method="POST" onsubmit="return validateUsuario()">
           <br>
           <h1>Registre usuario</h1>
           <br>
             <div class="form-group">
+                <p>RUN:</p>
                 <input type="text" name="rut" class="form-control" 
-                placeholder="Rut(Solo numeros, k reemplace por 1)" autofocus required="required">
+                placeholder="Rut(Solo numeros, k reemplace por 1)" 
+                autofocus required="required" minlength="9" maxlength="9">
             </div>
             <div class="form-group">
+                <p>Nombre y Apellidos</p>
                 <input type="text" name="nombre" class="form-control" 
                 placeholder="Nombres" autofocus required="required">
             </div>
             <div class="form-group">
+                <p>Correo:</p>
                 <input type="email" name="correo" class="form-control" 
                 placeholder="Correo" autofocus required="required">
             </div>
 
             <div class="form-group">
+                <p>Contraseña:</p>
               <input type="password" name="password" class="form-control" 
-                placeholder="Password" autofocus required="required">
+                placeholder="Password (min. 8 caracteres)" autofocus required="required" minlength="8">
             </div>
             <input type="submit" name="enviar" class="btn btn-success btn-block" value="Guardar">
           </form>

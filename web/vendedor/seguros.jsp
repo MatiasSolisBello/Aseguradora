@@ -30,7 +30,6 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Descripcion</th>
-                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody class="contenidobusqueda">
@@ -49,8 +48,7 @@
                     <td><%= rs.getString(4)%></td>
                     <td>
                         <!--BOTONES-->
-                        <a href="actSeguro.jsp?id=<%= rs.getString(1)%>&nombre=<%= rs.getString(2)%>&precio=<%= rs.getString(3)%>&descripcion=<%= rs.getString(4)%>" class="btn btn-secondary">EDITAR
-                        </a>
+                        <a href="actSeguro.jsp?id=<%= rs.getString(1)%>&nombre=<%= rs.getString(2)%>&precio=<%= rs.getString(3)%>&descripcion=<%= rs.getString(4)%>" class="btn btn-secondary">EDITAR</a>
                         <a href="borrarSeguro.jsp?id=<%= rs.getString(1)%>" class="btn btn-danger">ELIMINAR</a>
                     </td>
                 </tr>                                    

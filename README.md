@@ -21,9 +21,9 @@ Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
 - [x] Login for role
 - [x] Full password encryption
 - [x] Show purchases by logged in user 
+- [x] Generate PDF of sales
 
 ## Possible future improvements
-- [ ] Backup for buy segure
-- [ ] Generate PDF
+- [ ] Done buy process --> Table "venta" needs "id" AUTO_INCREMENT
 - [ ] API REST
 - [ ] Generate emails
