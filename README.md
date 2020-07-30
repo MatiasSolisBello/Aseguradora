@@ -16,18 +16,17 @@ Experiment made with Java Web
 In case of error: "WEB-INF folder is not created."
 Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
 
-## Vendedor: 
-Correo: admin@gmail.com
-Password: 12
+## Login: 
++ Correo: admin@gmail.com
++ Password: 12
 
 ## This project include:
 - [x] CRUD different tables
 - [x] Login for role
-- [x] Full password encryption
+- [x] Full password encryption for [md5](http://www.md5.cz "md5")
 - [x] Show purchases by logged in user 
 - [x] Generate PDF of sales
 
 ## Possible future improvements
-- [ ] Done buy process --> Table "venta" needs "id" AUTO_INCREMENT
 - [ ] API REST
 - [ ] Generate emails
