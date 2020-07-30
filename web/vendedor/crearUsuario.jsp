@@ -23,7 +23,7 @@
                 <p>RUN:</p>
                 <input type="text" name="rut" class="form-control" 
                 placeholder="Rut(Solo numeros, k reemplace por 1)" 
-                autofocus required="required" minlength="9" maxlength="9">
+                autofocus required="required" minlength="9" maxlength="10">
             </div>
             <div class="form-group">
                 <p>Nombre y Apellidos</p>

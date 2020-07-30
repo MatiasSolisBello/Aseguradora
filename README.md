@@ -16,6 +16,10 @@ Experiment made with Java Web
 In case of error: "WEB-INF folder is not created."
 Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
 
+## Vendedor: 
+Correo: admin@gmail.com
+Password: 12
+
 ## This project include:
 - [x] CRUD different tables
 - [x] Login for role

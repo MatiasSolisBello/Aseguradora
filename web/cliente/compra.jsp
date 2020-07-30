@@ -12,7 +12,6 @@
             String id = request.getParameter("id");
             String nombre = request.getParameter("nombre");
             String precio = request.getParameter("precio");
-            String descripcion = request.getParameter("descripcion");
         %>
         <!--DISEÑO-->
         <div class="container p-4">
@@ -23,10 +22,9 @@
             <form action="compra.jsp" method="POST">
                 <div class="form-group">
                 <h2 class="text-lg-center">Comprar Sguro</h2>
-                <strong class="text-center">ID: <%= id%></strong><br>
-                <strong name="seguro" class="text-center">Nombre: <%= nombre%></strong><br>
+                <strong id="id" class="id"class="text-center">ID: <%= id%></strong><br>
+                <strong  class="text-center">Nombre: <%= nombre%></strong><br>
                 <strong class="text-center">Precio: <%= precio%></strong><br>
-                <strong class="text-center">Descripcion: <%= descripcion%></strong><br><br>
                 <div class="form-group">
                     <p>INGRESE SU RUT PARA CONFIRMAR:</p>
                     <input type="text" name="rut" class="form-control" placeholder="Solo numeros">
@@ -43,15 +41,15 @@
         <%
         if (request.getParameter("enviar") != null) {
             String rut = request.getParameter("rut");
-            String seguro = request.getParameter("seguro");
+            
             try {                    
                 Class.forName("com.mysql.jdbc.Driver");
                 con=DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                 st=con.createStatement();
-                st.executeUpdate("insert into venta (id,rut,seguro) values('"+id+"','"+rut+"','"+seguro+"');");
+                st.executeUpdate("insert into venta (rut,seguro) values('"+rut+"','"+id+"');");
                 request.getRequestDispatcher("MisSeguros.jsp").forward(request, response);
             } catch (Exception e) {
-                out.print(e);
+                 out.print(" <div class=\"alert alert-danger\" role=\"alert\"> RUT no valido, recarge la pagina </div>");
             }
         }
         %>

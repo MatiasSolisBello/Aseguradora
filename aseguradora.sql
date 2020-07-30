@@ -1,3 +1,5 @@
+CREATE DATABASE `aseguradora`;
+
 CREATE TABLE IF NOT EXISTS `aseguradora`.`cliente` (
   `rut` INT NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
@@ -10,6 +12,7 @@ CREATE TABLE IF NOT EXISTS `aseguradora`.`seguro` (
   `id` INT NOT NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `precio` INT NOT NULL,
+  `descripcion` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -41,3 +44,4 @@ CREATE TABLE IF NOT EXISTS `aseguradora`.`vendedor` (
   PRIMARY KEY (`rut`))
 ENGINE = InnoDB;
 
+INSERT INTO `vendedor` (`rut`, `nombre`, `correo`, `pass`) VALUES ('20', 'admin', 'admin@gmail.com', 'c20ad4d76fe97759aa27a0c99bff6710');

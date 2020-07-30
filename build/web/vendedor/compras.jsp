@@ -45,8 +45,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/aseguradora","root","");
                 st = con.createStatement();
-                //rs = st.executeQuery("SELECT v.id, c.nombre, s.nombre FROM venta v INNER Join cliente c on c.rut = v.rut INNER JOIN seguro s on s.id = v.seguro;");
-                rs = st.executeQuery("SELECT * FROM venta");
+                rs = st.executeQuery("SELECT v.id, c.nombre, s.nombre FROM venta v INNER Join cliente c on c.rut = v.rut INNER JOIN seguro s on s.id = v.seguro;");
                 while (rs.next()) {
             %>
             <tr>
