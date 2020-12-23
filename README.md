@@ -28,5 +28,4 @@ Project > New > Other > Web > Standard Deployment Descriptor (web.xml)
 - [x] Generate PDF of sales
 
 ## Possible future improvements
-- [ ] API REST
 - [ ] Generate emails
